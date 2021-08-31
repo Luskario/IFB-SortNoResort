@@ -1,8 +1,8 @@
 # SortNoResort
 
-Nome: Lucas Rodrigues Vasconcelos
-Curso: ABI - Ciência da Computação
-Matéria: Estrutura de Dados
+    Nome: Lucas Rodrigues Vasconcelos
+    Curso: ABI - Ciência da Computação
+    Matéria: Estrutura de Dados
 
 Sobre:
 
