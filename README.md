@@ -16,7 +16,7 @@ Compilando o código:
   basta acessar a pasta do projeto no terminal e digitar o código "make" no terminal, o que irá gerar 
   um novo executável "SortNoResort"
 
-Execultando o código:
+Executando o código:
 
 - Com programa já compilado basta apenas executar o arquivo "SortNoResort" no terminal
 
