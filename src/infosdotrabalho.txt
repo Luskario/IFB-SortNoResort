@@ -1,0 +1,281 @@
+//-----------------------BubbleSort--------------------//
+
+Pseudocódigo
+
+entrada:
+    V - vetor de inteiros a ser ordenado
+    N - tamanho do vetor
+
+saída:
+    V - vetor já ordenado
+
+
+BubbleSort(vetor V, inteiro N)
+
+início
+faça
+    continua → 0
+    para i → 0 até i → N-1
+        se V[i] > V[i+1] então
+            aux → V[i]
+            V[i] → V[i+1]
+            V[i+1] → aux
+            continua → i
+        fim-se
+    fim-para
+enquanto continua difere de 0
+fim
+
+Sobre e Complexidade
+
+Sobre:
+
+    • Compara vetores adjacentes e troca de posição
+    caso o primeiro seja maior que o segundo
+
+    • Repete o método até que todo vetor
+    esteja ordenado
+
+Vantagens:
+
+    • Simples e fácil
+
+    • Um dos métodos mais difundidos
+
+Desvantagens:
+
+    • Eficiência prejudicada conforme o vetor
+    aumenta
+
+
+Complexidade
+
+    Para um vetor com N elementos, o
+    tempo de execução é:
+
+    • O(N), melhor caso: os elementos já estão ordenados.
+
+    • O(N2), pior caso: os elementos estão ordenados na
+    ordem inversa.
+
+    • O(N2), caso médio.
+
+//-----------------------InsertionSort--------------------//
+
+Pseudocódigo
+
+entrada:
+    V - vetor de inteiros a ser ordenado
+    N - tamanho do vetor
+
+saída:
+    V - vetor já ordenado
+
+
+InsertionSort(vetor V, inteiro N)
+
+início
+para i → 0 até i → N
+    aux → V[i]
+    para j → i até j → 0 ou até aux < V[j-1]
+        V[j] → V[j-1]
+    fim-para
+    V[j] → aux
+fim-para
+fim
+
+Sobre e Complexidade
+
+Sobre:
+
+    • Percorre o vetor verificando se o valor 
+    está na posição certa caso contrario move
+    todos os valores para frente colocando o valor
+    seu lugar
+
+    • Semelhante ao metodo de ordenação
+    de cartas de um baralho
+
+Vantagens:
+
+    • Estável
+
+    • Fácil implementação
+
+    • Um dos metodos mais eficientes na ordem
+    quadrática
+
+    • Um dos mais rápidos quando se trata de 
+    vetores com poucos dados, se saindo
+    melhor que o Quick Sort
+    
+
+Desvantagens:
+
+    • Alto custo para movimentação dos 
+    valores
+
+
+Complexidade:
+
+    Considerando um array com N elementos, o
+    tempo de execução é:
+
+    • O(N), melhor caso: os elementos já estão ordenados.
+
+    • O(N2), pior caso: os elementos estão ordenados na
+    ordem inversa.
+
+    • O(N2), caso médio.
+
+//-----------------------SelectionSort--------------------//
+
+Pseudocódigo
+
+entrada:
+    V - vetor de inteiros a ser ordenado
+    N - tamanho do vetor
+
+saída:
+    V - vetor já ordenado
+
+
+SelectionSort(vetor V, inteiro N)
+
+início
+para i → 0 até i → N-1
+    menor → i
+    para j → 0 até j → N
+        se V[j] < V[menor] então
+            menor → j
+        fim-se
+    fim-para
+    se i difere de menor
+        troca → V[i]
+        V[i] → V[menor]
+        V[menor] → troca
+    fim-se
+fim-para
+fim
+
+Sobre e Complexidade
+
+Sobre:
+
+    • Divide o vetor em duas partes: a parte esquerda com
+    os valores ordenados e a direita com os valores que
+    serão ordenados
+
+    • Repete esse processo até todos estarem ordenados
+
+Vantagens:
+
+    • Estável sem alterar a ordem dos dados originais
+    
+Desvantagens:
+
+    • Eficiência prejudicada conforme o vetor
+    aumenta
+
+Complexidade:
+
+    • Para um vetor com N elementos, o
+    tempo de execução é sempre de ordem O(N2)
+
+    • Melhor que o método Bubble Sort apesar de
+    possuirem a mesma complexidade no caso
+    médio
+
+
+//-----------------------QuickSort--------------------//
+
+Pseudocódigo
+
+entrada:
+    V - vetor de inteiros a ser ordenado
+    inic - primeira posição do vetor
+    final - ultima posição do vetor
+
+saída:
+    V - vetor já ordenado
+
+obs.: Processo dividido em duas funções
+
+QuickSort(vetor V, inteiro inic, inteiro final)
+
+início
+se final > inic
+    pivo → Particiona(vetor V, inteiro inic, inteiro final)
+    QuickSort(vetor V, inteiro inic, inteiro pivo-1)
+    QuickSort(vetor V, inteiro pivo+1, inteiro final)
+fim-se
+fim
+
+
+Particiona(vetor V, inteiro inic, inteiro final)
+
+início
+esq → inic
+dir → final
+pivo → V[inic]
+enquanto esq < dir
+    enquanto esq <= final e V[esq] <= pivo
+        esq → esq + 1
+    fim-enquanto
+    enquanto dir >= 0 e V[dir] > pivo
+        dir → dir - 1
+    fim-enquanto
+    se esq > dir
+        aux → V[esq]
+        V[esq] → V[dir]
+        V[dir] → aux
+    fim-se
+    V[inic] = V[dir]
+    V[dir] = pivo
+    retorna dir
+fim-enquanto
+fim
+
+Sobre e Complexidade
+
+Sobre:
+
+    • Também conhecido como ordenação por 
+    partição baseado na ideia de dividir
+    para conquistar
+
+    • Divide o vetor recursivamente baseado
+    num valor que será denomidado Pivô,
+    ordenando os valores a cada partição
+
+    • Repete o processo por recursividade
+    até que cada partição contenha um
+    elemento e o vetor esteja ordenado
+
+    • Considerado um dos métodos mais
+    eficientes
+
+Vantagens:
+
+    • Por mais que seu pior caso O(N2)
+    costuma ser o melhor método na 
+    maioria dos casos
+
+Desvantagens:
+
+    • Não é Estável
+
+    • Pivô não é balanceado
+
+    • Alguns casos especiais reduz drasticamente
+    sua eficiencia, principalmente quando
+    não é balanceado
+
+Complexidade:
+
+    Para um vetor com N elementos, o
+    tempo de execução é:
+
+    • O(N log N), melhor caso e caso médio;
+
+    • O(N2), pior caso.
