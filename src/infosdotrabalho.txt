@@ -230,8 +230,8 @@ enquanto esq < dir
         V[esq] → V[dir]
         V[dir] → aux
     fim-se
-    V[inic] = V[dir]
-    V[dir] = pivo
+    V[inic] → V[dir]
+    V[dir] → pivo
     retorna dir
 fim-enquanto
 fim
