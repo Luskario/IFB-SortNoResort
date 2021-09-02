@@ -42,7 +42,7 @@ void on_button_pseudo_clicked(GtkWidget *widget, gpointer data){
     } 
 
     else if(metodo[0] == 'I'){
-        informacao(texto, 65, 88);
+        informacao(texto, 65, 86);
 
     }
 
