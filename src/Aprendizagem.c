@@ -234,7 +234,6 @@ void on_box_metodos_aprende_changed(GtkWidget *widget, gpointer data){
 //----------------------------------------------------odernação ( V )---------------------------------------------------//
 
 void on_radio_crescente_aprende_toggled(GtkWidget *widget, gpointer data){
-    gboolean A = 
     ordem_aprende = 1;
 }
 
