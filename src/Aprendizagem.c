@@ -97,6 +97,7 @@ void on_button_run_aprende_clicked(GtkWidget *widget, gpointer data){
     char tmp[100000];
     float aux, media;
     strcpy(texto, "");
+    media = 0;
 
     if(tamanho == 0){
         strcpy(texto, "Informe Tamanho");
@@ -126,7 +127,7 @@ void on_button_run_aprende_clicked(GtkWidget *widget, gpointer data){
             sprintf(tmp, "tempo %d: %.5f ms\n", i, aux);
             strcat(texto, tmp);
         }
-        sprintf(tmp,"\ntempo médio: %.5f ms", aux);
+        sprintf(tmp,"\ntempo médio: %.5f ms", media);
         strcat(texto, tmp);
     } 
 
@@ -148,7 +149,7 @@ void on_button_run_aprende_clicked(GtkWidget *widget, gpointer data){
             sprintf(tmp, "tempo %d: %.5f ms\n", i, aux);
             strcat(texto, tmp);
         }
-        sprintf(tmp,"\ntempo médio: %.5f ms", aux);
+        sprintf(tmp,"\ntempo médio: %.5f ms", media);
         strcat(texto, tmp);
     }
 
@@ -170,7 +171,7 @@ void on_button_run_aprende_clicked(GtkWidget *widget, gpointer data){
             sprintf(tmp, "tempo %d: %.5f ms\n", i, aux);
             strcat(texto, tmp);
         }
-        sprintf(tmp,"\ntempo médio: %.5f ms", aux);
+        sprintf(tmp,"\ntempo médio: %.5f ms", media);
         strcat(texto, tmp);
 
     }
@@ -193,7 +194,7 @@ void on_button_run_aprende_clicked(GtkWidget *widget, gpointer data){
             sprintf(tmp, "tempo %d: %.5f ms\n", i, aux);
             strcat(texto, tmp);
         }
-        sprintf(tmp,"\ntempo médio: %.5f ms", aux);
+        sprintf(tmp,"\ntempo médio: %.5f ms", media);
         strcat(texto, tmp);
 
     } else {
