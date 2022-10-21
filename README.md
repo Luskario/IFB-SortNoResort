@@ -7,7 +7,7 @@
 Sobre:
 
 - O programa compreende em uma interface gráfica(feita pela biblioteca GTK) contendo dois módulos (Aprendizagem e Comparação) acerca dos
-    métodos de ordenação apreendidos na aula, contendo 4 métodos a disposição
+    métodos de ordenação aprendidos na aula, contendo 4 métodos a disposição
 
 Compilando o código:
 
